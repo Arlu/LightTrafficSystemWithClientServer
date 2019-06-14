@@ -29,11 +29,11 @@ class Dialog78 extends Thread // parallel dialogs on the same socket
             // Init streams to read/write text in this socket
             bufferSocketIn = new BufferedReader(
                     new InputStreamReader(
-                    clientSocket.getInputStream()));
+                            clientSocket.getInputStream()));
             bufferSocketOut = new PrintWriter(
                     new BufferedWriter(
-                    new OutputStreamWriter(
-                    clientSocket.getOutputStream())), true);
+                            new OutputStreamWriter(
+                                    clientSocket.getOutputStream())), true);
         } catch (IOException e)
         {
             try
@@ -83,11 +83,11 @@ class Dialog78 extends Thread // parallel dialogs on the same socket
 
     void exit()
     {
-            try
-            {
-                client.close();
-            } catch (IOException e2)
-            {
-            }
+        try
+        {
+            client.close();
+        } catch (IOException e2)
+        {
+        }
     }
 }

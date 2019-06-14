@@ -3,6 +3,7 @@ package Server;
 //File name DialogWin770.java
 //Iyar 5770
 //Levian Yehonatan
+
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -138,7 +139,7 @@ public class DialogWin78 extends JFrame implements ActionListener,WindowListener
     public void windowClosing(WindowEvent e)
     {
         myDialog.exit();
-     }
+    }
 
     public void windowClosed(WindowEvent e)
     {
@@ -160,26 +161,26 @@ public class DialogWin78 extends JFrame implements ActionListener,WindowListener
     {
     }
 
-	public void keyPressed(KeyEvent arg0) 
-	{
-		if( arg0.getKeyCode() == KeyEvent.VK_ENTER )
-		{
-	        printMe(textAreaDown.getText());
-	        myDialog.bufferSocketOut.println(textAreaDown.getText());
-	        textAreaDown.setText("");
-		}
-	}
+    public void keyPressed(KeyEvent arg0)
+    {
+        if( arg0.getKeyCode() == KeyEvent.VK_ENTER )
+        {
+            printMe(textAreaDown.getText());
+            myDialog.bufferSocketOut.println(textAreaDown.getText());
+            textAreaDown.setText("");
+        }
+    }
 
-	public void keyReleased(KeyEvent arg0) 
-	{
-		// TODO Auto-generated method stub
-		
-	}
+    public void keyReleased(KeyEvent arg0)
+    {
+        // TODO Auto-generated method stub
 
-	public void keyTyped(KeyEvent arg0) 
-	{
-		// TODO Auto-generated method stub
-		
-	}
+    }
+
+    public void keyTyped(KeyEvent arg0)
+    {
+        // TODO Auto-generated method stub
+
+    }
 
 }

@@ -12,6 +12,7 @@ class Server78 extends Thread 	   //the parallel server
     int DEFAULT_PORT = 50000;
     ServerSocket listenSocket;
     Socket clientSockets;
+    serverGUI serverGui;
 
     public Server78()   // constructor of a TCP server
     {
@@ -26,6 +27,7 @@ class Server78 extends Thread 	   //the parallel server
         }
 
         System.out.println("Server starts on port " + DEFAULT_PORT);
+        serverGui = new serverGUI();
         start();
     }
 
@@ -48,4 +50,3 @@ class Server78 extends Thread 	   //the parallel server
         System.out.println("end of server");
     }
 }
-

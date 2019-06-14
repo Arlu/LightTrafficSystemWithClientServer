@@ -1,3 +1,5 @@
+package LightTraffic;
+
 import javax.swing.JRadioButton;
 
 /**
@@ -6,7 +8,7 @@ import javax.swing.JRadioButton;
  */
 public class BuildTrafficLight
 {
-	public static void main(String[] args) 
+	public BuildTrafficLight()
 	{
 		final int numOfLights = 4 + 12 + 1;
 		Ramzor[] ramzorim = new Ramzor[numOfLights];
@@ -68,5 +70,6 @@ public class BuildTrafficLight
 
 		Controller controller = new Controller(ramzorim, butt, trafficLightFrame, myListener);
 		controller.startTraffic();
+
 	}
 }

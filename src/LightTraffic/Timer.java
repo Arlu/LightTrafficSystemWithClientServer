@@ -1,3 +1,5 @@
+package LightTraffic;
+
 /**
  * It represent a timer.
  * @author Arie and Gad.

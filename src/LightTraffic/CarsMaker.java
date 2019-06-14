@@ -1,3 +1,5 @@
+package LightTraffic;
+
 import javax.swing.JPanel;
 
 /**
@@ -9,11 +11,14 @@ public class CarsMaker extends Thread
 	private JPanel myPanel;
 	private ShloshaAvot myRamzor;
 	private int key;
+	private int numOfCrossroads;
+
 
 	public CarsMaker(JPanel myPanel, ShloshaAvot myRamzor, int key) {
 		this.myPanel = myPanel;
 		this.myRamzor = myRamzor;
 		this.key = key;
+		this.numOfCrossroads = 3;
 		setDaemon(true);
 		start();
 	}

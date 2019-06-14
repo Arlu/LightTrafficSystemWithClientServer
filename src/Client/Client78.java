@@ -3,13 +3,16 @@ package Client;
 //File name Client.java
 //Eiar 5770  update Sivan  5778
 //Levian Yehonatan
+
+import Server.Event64;
+
 import java.io.*;
 import java.net.*;
 
-class Client78
+public class Client78 extends Thread
 {
 
-    String SERVERHOST = "LOCALHOST";
+    String SERVERHOST = "Localhost";
 //    String SERVERHOST = "";
 //    String SERVERHOST = "147.161.23.20";
 
@@ -20,14 +23,20 @@ class Client78
     BufferedReader keyBoard;
     ClientWin78 myOutput;
     String line;
+    Event64 evConnectClient;
+    public Client78(Event64 evClientConn) {
+        this.evConnectClient = evClientConn;
 
-    public void doit()
+        start();
+    }
+
+
+    public void run()
     {
         try
         {
             // request to server
             clientSocket = new Socket(SERVERHOST, DEFAULT_PORT);
-
             // Init streams to read/write text in this socket
             bufferSocketIn = new BufferedReader(
                     new InputStreamReader(
@@ -36,7 +45,6 @@ class Client78
                     new BufferedWriter(
                     new OutputStreamWriter(
                     clientSocket.getOutputStream())), true);
-
 
 //  	   Init streams to read text from the keyboard
 //	   keyBoard = new BufferedReader(
@@ -86,7 +94,8 @@ class Client78
 
     public static void main(String[] args)
     {
-        Client78 client = new Client78();
-        client.doit();
+        Client78 client = new Client78(new Event64());
+        new LightTraffic.BuildTrafficLight();
+
     }
 }

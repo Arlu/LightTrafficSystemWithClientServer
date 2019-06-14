@@ -1,3 +1,5 @@
+package LightTraffic;
+
 import javax.swing.JFrame;
 
 /**

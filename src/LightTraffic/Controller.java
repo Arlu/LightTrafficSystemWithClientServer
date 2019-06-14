@@ -1,3 +1,5 @@
+package LightTraffic;
+
 import javax.swing.*;
 
 import static java.lang.Thread.sleep;

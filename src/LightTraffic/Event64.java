@@ -1,3 +1,5 @@
+package LightTraffic;
+
 import java.lang.Thread;
 
 /**
